@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosIntance = axios.create({
-  baseURL: "http://localhost:4000/api",
+  baseURL: `${import.meta.env.VITE_BACKEND_URL}/api`,
   withCredentials: true, // send coookies with requests
   timeout: 10000,
 });
