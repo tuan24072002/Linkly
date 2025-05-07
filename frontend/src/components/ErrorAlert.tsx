@@ -13,7 +13,7 @@ export const ErrorAlert = ({ error }: { error: AxiosError<AxiosResponse<any>> | 
                 className={"absolute top-4 w-[80%] sm:w-[40%] alert alert-error mb-4 flex items-center gap-2 text-error-content"}
             >
                 <X />
-                <span>{error.response?.data.message}</span>
+                <span>{error.response?.data.message || "Some thing went wrong!"}</span>
             </motion.div>
         </AnimatePresence>
     );
